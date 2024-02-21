@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hobbitappfe
+  namespace: hobbitapp-frontend
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: hobbitappfe
+  template:
+    metadata:
+      labels:
+        app: hobbitappfe
+    spec:
+      containers:
+      - name: hobbitappfe
+        image: hobbitfeetcontainers.azurecr.io/hobbitappfe-feb24:v2
+        ports:
+        - containerPort: 80
+      imagePullSecrets:
+      - name: my-registry-secret

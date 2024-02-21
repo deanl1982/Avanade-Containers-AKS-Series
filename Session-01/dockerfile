@@ -1,0 +1,19 @@
+# syntax = docker/dockerfile:1.2
+FROM debian:buster-slim
+
+# rest of your Dockerfile
+
+#FROM ubuntu:latest
+#RUN apt-get update && apt-get install -y apache2
+
+FROM alpine:latest
+RUN apk update && apk add apache2
+
+#COPY index.html /var/www/html/
+COPY index.html /var/www/localhost/htdocs
+
+
+EXPOSE 80
+
+#CMD ["/usr/sbin/apache2ctl", "-D", "FOREGROUND"]
+CMD ["httpd", "-D", "FOREGROUND"]
