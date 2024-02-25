@@ -10,6 +10,7 @@
 - *Anatomy of a Container*
 - *Docker Desktop*
 - *My First Container!*
+- *Hosting my own Wordpress!*
 
 ### Session-02
 
