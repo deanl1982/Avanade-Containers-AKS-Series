@@ -1,5 +1,5 @@
 # Session 01
-## Anatomy of a Container
+## My First Web Server
 
 **Use "docker build" to compile a new image from the dockerfile**
 
@@ -8,3 +8,7 @@
 **Create container from image**
 
 'docker run -d -p 80:80 web-app-fe'
+
+## Docker Compose!
+
+'docker-compose up --build'
