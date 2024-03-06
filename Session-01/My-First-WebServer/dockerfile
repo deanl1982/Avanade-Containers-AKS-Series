@@ -1,5 +1,5 @@
-FROM ubuntu:latest
-RUN apt-get update && apt-get install -y apache2
+#FROM ubuntu:latest
+#RUN apt-get update && apt-get install -y apache2
 
 FROM alpine:latest
 RUN apk update && apk add apache2
