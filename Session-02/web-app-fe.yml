@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: hobbitappfe
-  namespace: hobbitapp-frontend
+  name: web-appfe
+  namespace: web-app-frontend
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: hobbitappfe
+      app: web-appfe
   template:
     metadata:
       labels:
-        app: hobbitappfe
+        app: web-appfe
     spec:
       containers:
-      - name: hobbitappfe
-        image: hobbitfeetcontainers.azurecr.io/hobbitappfe-feb24:v2
+      - name: web-appfe
+        image: [acr-name-here].azurecr.io/[docker-image-name-here]:latest
         ports:
         - containerPort: 80
       imagePullSecrets:
