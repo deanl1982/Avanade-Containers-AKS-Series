@@ -8,7 +8,7 @@
 
 **Tag and push container image to ACR**
 
-'docker tag hobbitappfe [acr-name-here].azurecr.io/[docker-image-name-here]:latest'
+'docker tag [docker-image-name-here] [acr-name-here].azurecr.io/[docker-image-name-here]:latest'
 'docker push [acr-name-here].azurecr.io/[docker-image-name-here]:latest'
 
 **Connect to AKS**
