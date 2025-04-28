@@ -4,12 +4,12 @@
 **Login to Tenant and ACR**
 
 'az login --tenant [tenant-id]'
-'az acr login --name [acr-name-here]'
+'az acr login --name [contsess02]'
 
 **Tag and push container image to ACR**
 
-'docker tag [docker-image-name-here] [acr-name-here].azurecr.io/[docker-image-name-here]:latest'
-'docker push [acr-name-here].azurecr.io/[docker-image-name-here]:latest'
+'docker tag [docker-image-name-here] [contsess02].azurecr.io/[docker-image-name-here]:latest'
+'docker push [contsess02].azurecr.io/[docker-image-name-here]:latest'
 
 **Connect to AKS**
 
@@ -18,6 +18,7 @@
 **Deploy K8s Manifests**
 
 'kubectl apply -f web-app-fe.yml'
+
 'kubectl apply -f web-app-fe-service.yml'
 
 **Useful K8s Kubectl Commands**
